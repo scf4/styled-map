@@ -73,6 +73,42 @@ const Button = styledbutton`
 
 Yay!
 
+## What about themes?
+
+Mapping to themes is easy. Import `mapToTheme` like this:
+
+```js
+import styledMap, { mapToTheme as theme } from 'styled-map';
+```
+
+and setup your themes like this:
+
+```js
+const myTheme = {
+  buttonColor: {
+    primary: 'orange',
+    warning: 'red',
+    info: 'blue',
+    default: 'white',
+  },
+  ...
+};
+```
+
+and now you can do this:
+
+```js
+const Button = styled.button`
+    color: ${theme('buttonColor')};
+    border: 2px solid ${theme('buttonColor')};
+`;
+
+```
+
+## 😎
+
+> Note: importing `as theme` is optional, but it reads a lot better!
+
 ## License
 
 MIT Copyright 2017

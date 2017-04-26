@@ -3,7 +3,9 @@ Super simple lib to map props to styles with `styled-components`.
 
 ## Install
 `yarn add styled-map`
+
 or
+
 `npm install styled-map --save`
 
 ## Why?

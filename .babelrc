@@ -1,4 +1,3 @@
 {
-  "presets": ["es2015"],
-  "ignore": "*.test.js"
+  "presets": ["es2015"]
 }

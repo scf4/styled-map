@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "rimraf dist && babel lib --ignore *.test.js --out-dir dist"
+    "build": "rimraf dist && babel lib --out-dir dist"
   },
   "author": "scf4 (github.com/@scf4)",
   "license": "MIT",

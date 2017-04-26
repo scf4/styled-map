@@ -73,6 +73,8 @@ const Button = styledbutton`
 
 Yay!
 
+> Important: If there are no matching props, styled-map will use the last prop in your map by default. It's good practice to name this prop "default".
+
 ## What about themes?
 
 Mapping to themes is easy. Import `mapToTheme` like this:

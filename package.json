@@ -1,16 +1,28 @@
 {
   "name": "styled-map",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scf4/styled-map.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "styled components",
+    "styled-components",
+    "react",
+    "css",
+    "helper"
+  ],
+  "scripts": {
+    "test": "jest",
+    "build": "rimraf dist && babel lib --ignore *.test.js --out-dir dist"
+  },
+  "author": "scf4 (github.com/@scf4)",
+  "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "rimraf": "^2.6.1"
   }
 }

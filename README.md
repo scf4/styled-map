@@ -68,7 +68,14 @@ const buttonColor = styledMap({
 const Button = styledbutton`
     color: ${buttonColor};
     border: 2px solid ${buttonColor};
+    font-size: ${styledMap({
+      large: '2.5rem',
+      small: '1rem',
+    })};
 `;
+
+<Button large primary>Click me!</Button>
+
 ```
 
 Yay!

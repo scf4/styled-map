@@ -22,12 +22,12 @@ const Button = styled.button`
 
 ```js
 const Button = styled.button`
-    color: ${props =>
-        props.primary && 'orange' ||
-        props.warning && 'red' ||
-        props.info && 'blue' ||
-        'white'
-    };
+  color: ${props =>
+    props.primary && 'orange' ||
+    props.warning && 'red' ||
+    props.info && 'blue' ||
+    'white'
+  };
 `;
  ```
 
@@ -35,18 +35,19 @@ const Button = styled.button`
 
  ```js
 const Button = styled.button`
-    color: ${props =>
-        props.primary && 'orange' ||
-        props.warning && 'red' ||
-        props.info && 'blue' ||
-        'white'
-    };
-    border: 2px solid ${props =>
-        props.primary && 'orange' ||
-        props.warning && 'red' ||
-        props.info && 'blue' ||
-        'white'
-    };
+  color: ${props =>
+    props.primary && 'orange' ||
+    props.warning && 'red' ||
+    props.info && 'blue' ||
+    'white'
+  };
+  border: 2px solid ${props =>
+    props.primary && 'orange' ||
+    props.warning && 'red' ||
+    props.info && 'blue' ||
+    'white'
+  };
+  font-size: ${props => props.large ? '2.5rem' : '1rem' };
 `;
  ```
 
@@ -59,19 +60,19 @@ Thankfully we can greatly simplify things with `styled-map`:
 import styledMap from 'styled-map'
 
 const buttonColor = styledMap({
-    primary: 'orange',
-    warning: 'red',
-    info: 'blue',
-    default: 'white',
+  primary: 'orange',
+  warning: 'red',
+  info: 'blue',
+  default: 'white',
 });
 
 const Button = styledbutton`
-    color: ${buttonColor};
-    border: 2px solid ${buttonColor};
-    font-size: ${styledMap({
-      large: '2.5rem',
-      small: '1rem',
-    })};
+  color: ${buttonColor};
+  border: 2px solid ${buttonColor};
+  font-size: ${styledMap({
+    large: '2.5rem',
+    small: '1rem',
+  })};
 `;
 
 <Button large primary>Click me!</Button>
@@ -108,8 +109,8 @@ and now you can do this:
 
 ```js
 const Button = styled.button`
-    color: ${theme('buttonColor')};
-    border: 2px solid ${theme('buttonColor')};
+  color: ${theme('buttonColor')};
+  border: 2px solid ${theme('buttonColor')};
 `;
 
 ```

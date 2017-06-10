@@ -66,7 +66,7 @@ const buttonColor = styledMap({
   default: 'white',
 });
 
-const Button = styledbutton`
+const Button = styled.button`
   color: ${buttonColor};
   border: 2px solid ${buttonColor};
   font-size: ${styledMap({

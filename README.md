@@ -87,7 +87,7 @@ Much better!
 
 Sometimes you'll want to map styles to the value of a prop instead, e.g., you have a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
 
-Since `v1.0.0` you can use `styled-map` in these situations by simply passing a prop name as the first argument:
+Since `v2.0.0` you can use `styled-map` in these situations by simply passing a prop name as the first argument:
 
 ```js
 const Button = styled.button`

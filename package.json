@@ -11,6 +11,9 @@
     "styled components",
     "styled-components",
     "react",
+    "props",
+    "styles",
+    "map",
     "css",
     "helper"
   ],

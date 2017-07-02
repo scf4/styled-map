@@ -79,9 +79,26 @@ const Button = styled.button`
 
 ```
 
-Yay!
+Much better!
 
-> Important: If there are no matching props, styled-map will use the last prop in your map by default. It's good practice to name this prop "default".
+> Note: If there are no matching props, styled-map will look for a "default" item in your map. If it doesn't find one it will use the last item by default.
+
+## Optionally mapping to prop values
+
+Sometimes you'll want to map styles to the value of a prop instead, e.g., you have a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
+
+Since `v1.0.0` you can use `styled-map` in these situations by simply passing a prop name as the first argument:
+
+```js
+const Button = styled.button`
+  background: ${styledMap('type', {
+    primary: '#c00',
+    default: '#ddd',
+  })};
+`;
+```
+
+`styled-map` will then look at the Button's `type` prop for a matching value.
 
 ## What about themes?
 

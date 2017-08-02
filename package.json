@@ -28,5 +28,8 @@
     "babel-preset-env": "^1.5.2",
     "jest": "^19.0.2",
     "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "get-value": "^2.0.6"
   }
 }

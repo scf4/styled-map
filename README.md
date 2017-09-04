@@ -1,6 +1,8 @@
 # Styled Map
 Super simple lib to map props to styles with `styled-components`.
 
+#### ⭐️ New CSS-like syntax coming soon! [(Read more)](https://github.com/scf4/styled-map/blob/newsyntax/README.md)
+
 ## Install
 `yarn add styled-map`
 

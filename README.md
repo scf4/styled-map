@@ -1,7 +1,7 @@
-# Styled Map
-Super simple lib to map props to styles with `styled-components` and `emotion`.
+# Styled Map 3.0 ⭐️
+Simple CSS-like syntax to map props to styles with Styled Components and Emotion.
 
-#### ⭐️ New CSS-like syntax coming soon! [(Read more)](https://github.com/scf4/styled-map/blob/newsyntax/README.md)
+⚠️ New API in v3! 🎉
 
 ## Install
 `yarn add styled-map`
@@ -10,7 +10,7 @@ or
 
 `npm install styled-map --save`
 
-## Why?
+## Why Styled Map?
 The following code works for one prop:
 
 ```js
@@ -73,28 +73,11 @@ Much better!
 > Note: If there are no matching props, styled-map will look for a "default" item in your map. If it doesn't find one it will use the last item by default.
 
 ## Styled Map v3: Why the new syntax?
-I created this project to make things easier. After using `styled-map` for several months I came to the conclusion that the context switching between CSS and the style map objects can really get in the way.
+After using `styled-map` for several months I found the context switching between CSS and the style map JS objects to be awkward. 
 
-This CSS-like syntax further simplifies things, and IMO fits better with `styled-components`. 
+This CSS-like syntax further simplifies things and fits better with Styled Components.
 
-You can still use objects if you prefer.
-
-## Optionally mapping to prop values
-
-Sometimes you'll want to map styles to the *value* of a prop instead, e.g., you have a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
-
-Since `v2.0.0` you can use `styled-map` in these situations by simply passing a prop name as the first argument:
-
-```js
-const Button = styled.button`
-  background: ${styledMap('type', {
-    primary: '#c00',
-    default: '#ddd',
-  })};
-`;
-```
-
-`styled-map` will then look at the Button's `type` prop for a matching value.
+You can still use styledMap if you prefer
 
 ## What about themes?
 
@@ -127,11 +110,25 @@ const Button = styled.button`
 `;
 
 ```
-
-## 😎
-
 > Note: importing `as theme` is optional, but it reads a lot better!
+
+## Optionally mapping to prop values 
+
+Sometimes you'll want to map styles to the *value* of a prop instead, e.g., you have a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
+
+You can use `styled-map` in these situations by simply passing a prop name as the first argument. **This currently doesn't work with the CSS-like syntax — PRs welcome!**:
+
+```js
+const Button = styled.button`
+  background: ${styledMap('type', {
+    primary: '#c00',
+    default: '#ddd',
+  })};
+`;
+```
+
+`styled-map` will then look at the Button's `type` prop for a matching value.
 
 ## License
 
-MIT Copyright 2017
+MIT Copyright 2017–2018

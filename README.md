@@ -77,7 +77,7 @@ After using `styled-map` for several months I found the context switching betwee
 
 This CSS-like syntax further simplifies things and fits better with Styled Components.
 
-You can still use styledMap if you prefer
+You can still use objects if you prefer
 
 ## What about themes?
 

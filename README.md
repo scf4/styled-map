@@ -110,6 +110,23 @@ const Button = styled.button`
 `;
 
 ```
+
+You can also refer to nested objects, e.g. if your theme looks like this:
+
+```js
+const theme = {
+  colors: {
+    button: {
+      primary: '#b00',
+      info: '#0b0',
+      etc: '#00f',
+    }
+  }
+}
+```
+
+You can do`theme('colors.button')`
+
 > Note: importing `as theme` is optional, but it reads a lot better!
 
 ## Optionally mapping to prop values 

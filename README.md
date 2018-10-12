@@ -9,7 +9,7 @@
 
 <br />
 
-<a href="https://www.npmjs.com/package/styled-map" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2F2017-01-01%3A2021-01-01%2Fstyled-map&query=downloads&colorB=blue" alt="Total downloads" height="20px" width="114px" /></a> <a href="https://github.com/scf4/styled-map/stargazers"><img src="https://img.shields.io/github/stars/scf4/styled-map.svg" alt="GitHub Stars" height="20px" style="min-width: 68px" /></a> <a href="#"><img src="https://img.shields.io/bundlephobia/min/styled-map.svg" alt="Bundle size" height="20px" style="min-width: 132px" /></a> <a href="#"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="MIT License" height="20px" width="78px" /></a>
+<a href="https://www.npmjs.com/package/styled-map" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2F2017-01-01%3A2021-01-01%2Fstyled-map&query=downloads&colorB=blue" alt="Total downloads" height="20px" width="114px" /></a> <a href="https://github.com/scf4/styled-map/stargazers"><img src="https://img.shields.io/github/stars/scf4/styled-map.svg" alt="GitHub Stars" height="20px" style="min-width: 68px" /></a> <a href="#"><img src="https://img.shields.io/bundlephobia/min/styled-map.svg" alt="Bundle size" height="20px" style="min-width: 132px" /></a> <a href="#"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="MIT License" height="20px" width="78px" /></a><br />
 
 
 </div>

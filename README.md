@@ -26,7 +26,7 @@ or
 
 ## Why use Styled Map?
 
-Styled Map simplifies your components' CSS, making your code cleaner and clearer whenever you use props to alter styles.
+Styled Map simplifies your components' CSS, making your code cleaner and clearer wherever you use props to alter styles.
 
 ### Without Styled Map
 With Styled Components alone, you'll often do something like this:

@@ -5,13 +5,17 @@
   
 **A better way to map props to styles**
 
-**A simple and unique solution for Styled Components and Emotion**
+**Simple, unique solution for Styled Components and Emotion**
 
 <br />
 
 <a href="https://www.npmjs.com/package/styled-map" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2F2017-01-01%3A2021-01-01%2Fstyled-map&query=downloads&colorB=blue" alt="Total downloads" height="20px" width="114px" /></a> <a href="https://github.com/scf4/styled-map/stargazers"><img src="https://img.shields.io/github/stars/scf4/styled-map.svg" alt="GitHub Stars" height="20px" style="min-width: 68px" /></a> <a href="#"><img src="https://img.shields.io/bundlephobia/min/styled-map.svg" alt="Bundle size" height="20px" style="min-width: 132px" /></a> <a href="#"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="MIT License" height="20px" width="78px" /></a><br /><br /><br />
 
 </div>
+
+## Example
+
+<img src="https://i.imgur.com/aohFk5k.png" height="455px" width="522px" />
 
 ## Install
 `yarn add styled-map`
@@ -20,84 +24,86 @@ or
 
 `npm install styled-map --save`
 
-## Why Styled Map?
-The following code works for one prop:
+## Without Styled Map
+With Styled Components alone, you'll often do something like this:
 
 ```js
 const Button = styled.button`
-  color: ${props => props.primary ? 'orange' : 'white'};
+  color: ${props => props.primary ? '#0c0' : '#ccc'};
 `;
 
  ```
 
- but it quickly turns messy:
+ but this quickly turns messy:
 
  ```js
 const Button = styled.button`
   color: ${props =>
-    props.primary && 'orange' ||
-    props.warning && 'red' ||
-    props.info && 'blue' ||
-    'white'
+    props.primary && '#0c0' ||
+    props.warning && '#c00' ||
+    props.info && '#0cc' ||
+    '#ccc'
   };
   border: 2px solid ${props =>
-    props.primary && 'orange' ||
-    props.warning && 'red' ||
-    props.info && 'blue' ||
-    'white'
+    props.primary && '#0c0' ||
+    props.warning && '#c00' ||
+    props.info && '#0cc' ||
+    '#ccc'
   };
-  font-size: ${props => props.large ? '2.5rem' : '1rem' };
+  font-size: ${props =>
+    props.small && '8px' ||
+    props.medium && '18px' ||
+    props.large && '32px' ||
+    '16px'
+  };
 `;
+
+<Button primary large>Submit</Button>
  ```
 
-## 😭
-
-## How to use Styled Map
-Thankfully we can greatly simplify things with `styled-map`:
+## With Styled Map
+We can greatly simplify things with `styled-map`:
 
 ```js
-import styledMap from 'styled-map'
+import styledMap from 'styled-map';
 
 const buttonColor = styledMap`
-  primary: orange;
-  warning: red;
-  info: blue;
-  default: white;
+  primary: #0c0;
+  warning: #c00;
+  info: #0cc;
+  default: #ccc;
 `;
 
 const Button = styled.button`
   color: ${buttonColor};
   border: 2px solid ${buttonColor};
   font-size: ${styledMap`
-    large: 2.5rem;
-    small: 1rem;
+    large: 32px;
+    small: 8px;
+    medium: 18px;
+    default: 16px;
   `};
 `;
 
-<Button large primary>Click me!</Button>
+<Button primary large>Submit</Button>
 
 ```
 
-Much better!
+Much better! 
 
 > Note: If there are no matching props, styled-map will look for a "default" item in your map. If it doesn't find one it will use the last item by default.
 
-## Styled Map v3: Why the new syntax?
-After using `styled-map` for several months I found the context switching between CSS and the style map JS objects to be awkward. 
+## What's with the pseudo-CSS syntax?
 
-This CSS-like syntax further simplifies things and fits better with Styled Components.
+Until v3.0, Styled Map used JavaScript objects <a href="https://gist.github.com/scf4/4498561f2f38a82b7525be2b4bc94a61" target="_blank">like this</a>. You can read more about this decision [here](https://github.com/scf4/styled-map/issues/7).
 
-You can still use objects if you prefer
+You can still use objects if you prefer, and there are currently no plans to deprecate this option.
 
-## What about themes?
+## Usage with themes
 
-Mapping to themes is easy. Import `mapToTheme` like this:
+Styled Map makes mapping to themes incredibly easy with the `mapToTheme` function.
 
-```js
-import styledMap, { mapToTheme as theme } from 'styled-map';
-```
-
-and setup your themes like this:
+Simply set up your themes like this:
 
 ```js
 const myTheme = {
@@ -114,6 +120,8 @@ const myTheme = {
 and now you can do this:
 
 ```js
+import styledMap, { mapToTheme as theme } from 'styled-map';
+
 const Button = styled.button`
   color: ${theme('buttonColor')};
   border: 2px solid ${theme('buttonColor')};
@@ -121,7 +129,11 @@ const Button = styled.button`
 
 ```
 
-You can also refer to nested objects, e.g. if your theme looks like this:
+> Note: importing `as theme` is optional, but it reads a lot better!
+
+### Nested theme objects
+
+Nested objects can be refered to with dots, so you can write `theme('colors.button')` if your theme looks like this:
 
 ```js
 const theme = {
@@ -135,15 +147,11 @@ const theme = {
 }
 ```
 
-You can do`theme('colors.button')`
-
-> Note: importing `as theme` is optional, but it reads a lot better!
-
 ## Optionally mapping to prop values 
 
-Sometimes you'll want to map styles to the *value* of a prop instead, e.g., you have a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
+Sometimes you'll want to map styles to the *value* of a prop instead of using prop keys. This is especially useful if you have something like a `type` variable to pass to your component and you don't want to use destructuring like `<Button {...{[type]:true}} />`.
 
-You can use `styled-map` in these situations by simply passing a prop name as the first argument. **This currently doesn't work with the CSS-like syntax — PRs welcome!**:
+You can use `styled-map` in these situations by simply passing a prop name as the first argument. 
 
 ```js
 const Button = styled.button`
@@ -155,6 +163,8 @@ const Button = styled.button`
 ```
 
 `styled-map` will then look at the Button's `type` prop for a matching value.
+
+**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax so you must use destructuring for now. This functionality should arrive by v4.0. PRs welcome!**:
 
 ## License
 

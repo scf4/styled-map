@@ -2,7 +2,9 @@
   
 <h1>Styled Map ✨</h1>
 
-**Keep your CSS clean when using props to alter styles. A simple and unique solution for Styled Components and Emotion**
+**Keep your CSS clean when using props to alter styles**
+
+**A simple and unique solution for Styled Components and Emotion**
 
 [![Total downloads](https://img.shields.io/badge/dynamic/json.svg?label=downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2F2017-01-01%3A2021-01-01%2Fstyled-map&query=downloads&colorB=blue)](https://www.npmjs.com/package/styled-map)
 [![GitHub stars](https://img.shields.io/github/stars/scf4/styled-map.svg)](https://github.com/scf4/styled-map/stargazers)

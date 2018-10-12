@@ -2,7 +2,7 @@
   
 <img src="https://i.imgur.com/IQ37K7m.png" height="49px" width="249px" /><br />
 
-<div style="padding: 20px 0 20px ">
+<div style="padding: 20px 0 20px; margin: 20px 0 20px;">
   
 **Keep your CSS clean when using props to alter styles**
 

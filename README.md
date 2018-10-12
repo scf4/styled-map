@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/IQ37K7m.png" height="49px" width="249px" /><br />
 <br />
   
-**Keep your CSS clean when using props to alter styles**
+**A better way to map props to styles**
 
 **A simple and unique solution for Styled Components and Emotion**
 

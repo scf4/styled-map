@@ -5,7 +5,7 @@
   
 **A better way to map props to styles**
 
-**Simple, unique solution for Styled Components and Emotion**
+**Simple CSS-like syntax, for Styled Components and Emotion**
 
 <br />
 

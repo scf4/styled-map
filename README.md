@@ -11,8 +11,6 @@
 [![Bundle size (minified)](https://img.shields.io/bundlephobia/min/styled-map.svg)]()
 [![License](https://img.shields.io/packagist/l/doctrine/orm.svg)]()
 
-⚠️  Awesome new syntax in v3!
-
 </div>
 
 ## Install

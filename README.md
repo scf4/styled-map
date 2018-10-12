@@ -24,7 +24,9 @@ or
 
 `npm install styled-map --save`
 
-## Why Styled Map?
+## Why use Styled Map?
+
+Styled Map simplifies your Styled Component CSS cleaner and clearer when using props to alter styles.
 
 ### Without Styled Map
 With Styled Components alone, you'll often do something like this:

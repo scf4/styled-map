@@ -1,7 +1,17 @@
-# Styled Map 3.0 ⭐️
-Simple CSS-like syntax to map props to styles with Styled Components and Emotion.
+<div align="center">
+  
+<h1>Styled Map ✨</h1>
 
-⚠️ New API in v3! 🎉
+**Keep your CSS clean when using props to alter styles. A simple and unique solution for Styled Components and Emotion**
+
+[![Total downloads](https://img.shields.io/badge/dynamic/json.svg?label=downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2F2017-01-01%3A2021-01-01%2Fstyled-map&query=downloads&colorB=blue)](https://www.npmjs.com/package/styled-map)
+[![GitHub stars](https://img.shields.io/github/stars/scf4/styled-map.svg)](https://github.com/scf4/styled-map/stargazers)
+[![Bundle size (minified)](https://img.shields.io/bundlephobia/min/styled-map.svg)]()
+[![License](https://img.shields.io/packagist/l/doctrine/orm.svg)]()
+
+⚠️  Awesome new syntax in v3!
+
+</div>
 
 ## Install
 `yarn add styled-map`

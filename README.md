@@ -66,7 +66,7 @@ const Button = styled.button`
  ```
 
 ### With Styled Map
-We can greatly simplify things with `styled-map`:
+Here's the same component using `styled-map`:
 
 ```js
 import styledMap from 'styled-map';

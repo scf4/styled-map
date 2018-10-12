@@ -1,6 +1,6 @@
 <div align="center">
   
-<h1>Styled Map ✨</h1>
+<img src="https://i.imgur.com/IQ37K7m.png" height="49px" width="249px" /><br />
 
 **Keep your CSS clean when using props to alter styles**
 

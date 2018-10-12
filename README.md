@@ -24,7 +24,9 @@ or
 
 `npm install styled-map --save`
 
-## Without Styled Map
+## Why Styled Map?
+
+### Without Styled Map
 With Styled Components alone, you'll often do something like this:
 
 ```js
@@ -61,7 +63,7 @@ const Button = styled.button`
 <Button primary large>Submit</Button>
  ```
 
-## With Styled Map
+### With Styled Map
 We can greatly simplify things with `styled-map`:
 
 ```js

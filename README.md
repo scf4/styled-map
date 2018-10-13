@@ -153,7 +153,7 @@ const theme = {
 
 ## Optionally mapping to prop values 
 
-Sometimes you'll want to map styles to the *value* of a prop instead of using prop keys. This is especially useful if you have something like a `type` variable to pass to your component and you don't want to use destructuring like `<Button {...{[type]:true}} />`.
+Sometimes you'll want to map styles to the *value* of a prop instead of using prop keys. This is especially useful if you have something like a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
 
 You can use `styled-map` in these situations by simply passing a prop name as the first argument. 
 
@@ -168,7 +168,7 @@ const Button = styled.button`
 
 `styled-map` will then look at the Button's `type` prop for a matching value.
 
-**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax so you must use destructuring for now. This functionality should arrive by v4.0. PRs welcome!**:
+**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax. This functionality should arrive by v4.0. PRs welcome!**:
 
 ## License
 

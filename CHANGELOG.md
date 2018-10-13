@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [3.1.0] - 2018-10-13
 ### Added
 - Added support for nested object properties in mapToTheme (Thanks to [#5](https://github.com/scf4/styled-map/pull/5))
+### Changed
+- Smaller bundle size (~500b)
 
 ## [3.0.0] - 2018-08-08
 ### Added

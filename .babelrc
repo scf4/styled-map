@@ -1,5 +1,7 @@
 {
   "presets": [
-    ["env", { "loose": true }]
-  ]
+    ["env", { "loose": true }],
+    ["minify"]
+  ],
+  "comments": false
 }

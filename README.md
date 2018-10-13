@@ -5,7 +5,7 @@
   
 **A better way to map props to styles**
 
-**Simple, unique solution for Styled Components and Emotion**
+**Simple CSS-like syntax, for Styled Components and Emotion**
 
 <br />
 
@@ -26,7 +26,7 @@ or
 
 ## Why use Styled Map?
 
-Styled Map simplifies your components' CSS, making your code cleaner and clearer whenever you use props to alter styles.
+Styled Map simplifies your components' CSS, making your code cleaner and clearer wherever you use props to alter styles.
 
 ### Without Styled Map
 With Styled Components alone, you'll often do something like this:
@@ -99,7 +99,7 @@ Much better!
 
 ## What's with the pseudo-CSS syntax?
 
-Until v3.0, Styled Map used JavaScript objects <a href="https://gist.github.com/scf4/4498561f2f38a82b7525be2b4bc94a61" target="_blank">like this</a>. You can read more about this decision [here](https://github.com/scf4/styled-map/issues/7).
+Until v3.0, Styled Map used JavaScript objects <a href="https://gist.github.com/scf4/4498561f2f38a82b7525be2b4bc94a61" target="_blank">like this</a>. [Read more about the decision to use a new syntax](https://github.com/scf4/styled-map/issues/7).
 
 You can still use objects if you prefer, and there are currently no plans to deprecate this option.
 

@@ -15,7 +15,9 @@
 
 ## Example
 
-<img src="https://i.imgur.com/aohFk5k.png" style="max-height: 455px; max-width: 522px;" />
+<div style="max-height: 455px; max-width: 522px;">
+  <img src="https://i.imgur.com/aohFk5k.png" style="max-height:100%;max-width:100%;" />
+</div>
 
 ## Install
 `yarn add styled-map`

@@ -1,6 +1,6 @@
 <br /><div align="center">
   
-<img src="https://i.imgur.com/IQ37K7m.png" height="49px" width="249px" /><br />
+<img src="https://i.imgur.com/IQ37K7m.png" width="249px" /><br />
 <br />
   
 **A better way to map props to styles**
@@ -16,7 +16,7 @@
 ## Example
 
 
-<img src="https://i.imgur.com/aohFk5k.png" width="522px" height="455px" />
+<img src="https://i.imgur.com/aohFk5k.png" style="width: 100%; max-width: 522px; max-height: 455px;" />
 
 
 ## Install

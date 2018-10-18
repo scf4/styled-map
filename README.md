@@ -16,7 +16,7 @@
 ## Example
 
 
-<img src="https://i.imgur.com/aohFk5k.png" style="width: 100%; max-width: 522px; max-height: 455px;" />
+<img src="https://i.imgur.com/aohFk5k.png" style="width: 100%; max-width: 522px; max-height: 455px" />
 
 
 ## Install

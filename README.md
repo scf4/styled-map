@@ -172,6 +172,12 @@ const Button = styled.button`
 
 **Note: This currently doesn't work doesn't work with the pseudo-CSS syntax. This functionality should arrive by v4.0. PRs welcome!**:
 
+## Typings
+
+We currently have TypeScript typings in release candidate stage @ `3.2.0-rc.1`. Please upgrade specifically to `styled-map@3.2.0-rc.1` if you want typings now. 
+
+
+
 ## License
 
 MIT Copyright 2017–2018

@@ -171,6 +171,27 @@ const Button = styled.button`
 
 `styled-map` will then look at the Button's `type` prop for a matching value.
 
+This also works in `mapToTheme`:
+```js
+import styledMap, { mapToTheme as theme } from 'styled-map';
+
+const myTheme = {
+  buttonColor: {
+    primary: 'orange',
+    warning: 'red',
+    info: 'blue',
+    default: 'white',
+  },
+  ...
+};
+
+const Button = styled.button`
+  color: ${theme('buttonColor', 'kind')};
+`;
+
+<Button kind='warning'>Click</Button> // will be red
+```
+
 **Note: This currently doesn't work doesn't work with the pseudo-CSS syntax. This functionality should arrive by v4.0. PRs welcome!**:
 
 ## Typings

@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [3.3.0] - 2019-05-15
 ### Added
-- Added `prop` parameter in `mapToTheme` (Thanks to @mmartinsky - https://github.com/scf4/styled-map/pull/19)
+- Added `prop` parameter in `mapToTheme` (Thanks to @mmartinsky - [#19](https://github.com/scf4/styled-map/pull/19))
 ### Changed
 - Updated all dependencies
 

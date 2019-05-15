@@ -100,12 +100,6 @@ Much better!
 
 > Note: If there are no matching props, styled-map will look for a "default" item in your map. If it doesn't find one it will use the last item by default.
 
-## What's with the pseudo-CSS syntax?
-
-Until v3.0, Styled Map used JavaScript objects <a href="https://gist.github.com/scf4/4498561f2f38a82b7525be2b4bc94a61" target="_blank">like this</a>. [Read more about the decision to use a new syntax](https://github.com/scf4/styled-map/issues/7).
-
-You can still use objects if you prefer, and there are currently no plans to deprecate this option.
-
 ## Usage with themes
 
 Styled Map makes mapping to themes incredibly easy with the `mapToTheme` function.
@@ -192,14 +186,12 @@ const Button = styled.button`
 <Button kind='warning'>Click</Button> // will be red
 ```
 
-**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax. This functionality should arrive by v4.0. PRs welcome!**:
+**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax ([new in v3.0](https://github.com/scf4/styled-map/issues/7)). This functionality should arrive by v4.0. PRs welcome!**:
 
 ## Typings
 
-We currently have TypeScript typings in release candidate stage @ `3.2.0-rc.1`. Please upgrade specifically to `styled-map@3.2.0-rc.1` if you want typings now. 
-
-
+StyledMap has TypeScript typings since version `3.2.0`.
 
 ## License
 
-MIT Copyright 2017–2018
+MIT Copyright 2017–2019

@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.3.0] - 2019-05-15
+### Added
+- Added `prop` parameter in `mapToTheme` (Thanks to @mmartinsky - https://github.com/scf4/styled-map/pull/19)
+### Changed
+- Updated all dependencies
+
 ## [3.2.0-rc.1] - 2018-10-18
 ### Added
 - Added basic TypeScript typings

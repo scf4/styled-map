@@ -3,9 +3,21 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.1.0 - Beta] - 2018-08-08
+## [3.3.0] - 2019-05-15
+### Added
+- Added `prop` parameter in `mapToTheme` (Thanks to @mmartinsky - [#19](https://github.com/scf4/styled-map/pull/19))
+### Changed
+- Updated all dependencies
+
+## [3.2.0-rc.1] - 2018-10-18
+### Added
+- Added basic TypeScript typings
+
+## [3.1.0] - 2018-10-13
 ### Added
 - Added support for nested object properties in mapToTheme (Thanks to [#5](https://github.com/scf4/styled-map/pull/5))
+### Changed
+- Smaller bundle size (~500b)
 
 ## [3.0.0] - 2018-08-08
 ### Added

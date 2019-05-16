@@ -1,5 +1,7 @@
 {
   "presets": [
-    ["env", { "loose": true }]
-  ]
+    ["@babel/preset-env", { "loose": true }],
+    ["minify"]
+  ],
+  "comments": false
 }

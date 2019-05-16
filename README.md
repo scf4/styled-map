@@ -1,7 +1,24 @@
-# Styled Map 3.0 ⭐️
-Simple CSS-like syntax to map props to styles with Styled Components and Emotion.
+<br /><div align="center">
+  
+<img src="https://i.imgur.com/IQ37K7m.png" width="249px" /><br />
+<br />
+  
+**A better way to map props to styles**
 
-⚠️ New API in v3! 🎉
+**Simple CSS-like syntax, for Styled Components and Emotion**
+
+<br />
+
+<a href="https://www.npmjs.com/package/styled-map" target="_blank"><img src="https://img.shields.io/badge/dynamic/json.svg?label=downloads&url=https%3A%2F%2Fapi.npmjs.org%2Fdownloads%2Fpoint%2F2017-01-01%3A2021-01-01%2Fstyled-map&query=downloads&colorB=blue" alt="Total downloads" height="20px" width="114px" /></a> <a href="https://github.com/scf4/styled-map/stargazers"><img src="https://img.shields.io/github/stars/scf4/styled-map.svg" alt="GitHub Stars" height="20px" style="min-width: 68px" /></a> <a href="#"><img src="https://img.shields.io/bundlephobia/minzip/styled-map.svg" alt="Bundle size" height="20px" style="min-width: 132px" /></a> <a href="#"><img src="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="MIT License" height="20px" width="78px" /></a><br /><br /><br />
+
+</div>
+
+## Example
+
+<div style="width: 100%">
+  <img src="https://i.imgur.com/aohFk5k.png" style="max-width: 100%; max-height: auto;" width="522px" />
+<div>
+
 
 ## Install
 `yarn add styled-map`
@@ -10,84 +27,84 @@ or
 
 `npm install styled-map --save`
 
-## Why Styled Map?
-The following code works for one prop:
+## Why use Styled Map?
+
+Styled Map simplifies your components' CSS, making your code cleaner and clearer wherever you use props to alter styles.
+
+### Without Styled Map
+With Styled Components alone, you'll often do something like this:
 
 ```js
 const Button = styled.button`
-  color: ${props => props.primary ? 'orange' : 'white'};
+  color: ${props => props.primary ? '#0c0' : '#ccc'};
 `;
 
  ```
 
- but it quickly turns messy:
+ but this quickly turns messy:
 
  ```js
 const Button = styled.button`
   color: ${props =>
-    props.primary && 'orange' ||
-    props.warning && 'red' ||
-    props.info && 'blue' ||
-    'white'
+    props.primary && '#0c0' ||
+    props.warning && '#c00' ||
+    props.info && '#0cc' ||
+    '#ccc'
   };
   border: 2px solid ${props =>
-    props.primary && 'orange' ||
-    props.warning && 'red' ||
-    props.info && 'blue' ||
-    'white'
+    props.primary && '#0c0' ||
+    props.warning && '#c00' ||
+    props.info && '#0cc' ||
+    '#ccc'
   };
-  font-size: ${props => props.large ? '2.5rem' : '1rem' };
+  font-size: ${props =>
+    props.small && '8px' ||
+    props.medium && '18px' ||
+    props.large && '32px' ||
+    '16px'
+  };
 `;
+
+<Button primary large>Submit</Button>
  ```
 
-## 😭
-
-## How to use Styled Map
-Thankfully we can greatly simplify things with `styled-map`:
+### With Styled Map
+Here's the same component using `styled-map`:
 
 ```js
-import styledMap from 'styled-map'
+import styledMap from 'styled-map';
 
 const buttonColor = styledMap`
-  primary: orange;
-  warning: red;
-  info: blue;
-  default: white;
+  primary: #0c0;
+  warning: #c00;
+  info: #0cc;
+  default: #ccc;
 `;
 
 const Button = styled.button`
   color: ${buttonColor};
   border: 2px solid ${buttonColor};
   font-size: ${styledMap`
-    large: 2.5rem;
-    small: 1rem;
+    large: 32px;
+    small: 8px;
+    medium: 18px;
+    default: 16px;
   `};
 `;
 
-<Button large primary>Click me!</Button>
+<Button primary large>Submit</Button>
 
 ```
 
-Much better!
+Much better! 
 
 > Note: If there are no matching props, styled-map will look for a "default" item in your map. If it doesn't find one it will use the last item by default.
 
-## Styled Map v3: Why the new syntax?
-After using `styled-map` for several months I found the context switching between CSS and the style map JS objects to be awkward. 
+## Usage with themes
 
-This CSS-like syntax further simplifies things and fits better with Styled Components.
+Styled Map makes mapping to themes incredibly easy with the `mapToTheme` function.
 
-You can still use objects if you prefer
-
-## What about themes?
-
-Mapping to themes is easy. Import `mapToTheme` like this:
-
-```js
-import styledMap, { mapToTheme as theme } from 'styled-map';
-```
-
-and setup your themes like this:
+Simply set up your themes like this:
 
 ```js
 const myTheme = {
@@ -104,6 +121,8 @@ const myTheme = {
 and now you can do this:
 
 ```js
+import styledMap, { mapToTheme as theme } from 'styled-map';
+
 const Button = styled.button`
   color: ${theme('buttonColor')};
   border: 2px solid ${theme('buttonColor')};
@@ -111,7 +130,11 @@ const Button = styled.button`
 
 ```
 
-You can also refer to nested objects, e.g. if your theme looks like this:
+> Note: importing `as theme` is optional, but it reads a lot better!
+
+### Nested theme objects
+
+Nested objects can be refered to with dots, so you can write `theme('colors.button')` if your theme looks like this:
 
 ```js
 const theme = {
@@ -125,15 +148,11 @@ const theme = {
 }
 ```
 
-You can do`theme('colors.button')`
-
-> Note: importing `as theme` is optional, but it reads a lot better!
-
 ## Optionally mapping to prop values 
 
-Sometimes you'll want to map styles to the *value* of a prop instead, e.g., you have a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
+Sometimes you'll want to map styles to the *value* of a prop instead of using prop keys. This is especially useful if you have something like a `type` variable to pass to your component and you don't want to do something like `<Button {...{[type]:true}} />`.
 
-You can use `styled-map` in these situations by simply passing a prop name as the first argument. **This currently doesn't work with the CSS-like syntax — PRs welcome!**:
+You can use `styled-map` in these situations by simply passing a prop name as the first argument. 
 
 ```js
 const Button = styled.button`
@@ -146,6 +165,33 @@ const Button = styled.button`
 
 `styled-map` will then look at the Button's `type` prop for a matching value.
 
+This also works in `mapToTheme`:
+```js
+import styledMap, { mapToTheme as theme } from 'styled-map';
+
+const myTheme = {
+  buttonColor: {
+    primary: 'orange',
+    warning: 'red',
+    info: 'blue',
+    default: 'white',
+  },
+  ...
+};
+
+const Button = styled.button`
+  color: ${theme('buttonColor', 'kind')};
+`;
+
+<Button kind='warning'>Click</Button> // will be red
+```
+
+**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax ([new in v3.0](https://github.com/scf4/styled-map/issues/7)). This functionality should arrive by v4.0. PRs welcome!**:
+
+## Typings
+
+StyledMap has TypeScript typings since version `3.2.0`.
+
 ## License
 
-MIT Copyright 2017–2018
+MIT Copyright 2017–2019

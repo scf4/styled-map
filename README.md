@@ -186,7 +186,7 @@ const Button = styled.button`
 <Button kind='warning'>Click</Button> // will be red
 ```
 
-**Note: This currently doesn't work doesn't work with the pseudo-CSS syntax ([new in v3.0](https://github.com/scf4/styled-map/issues/7)). This functionality should arrive by v4.0. PRs welcome!**:
+**Note: This currently doesn't work with the pseudo-CSS syntax ([new in v3.0](https://github.com/scf4/styled-map/issues/7)). This functionality should arrive by v4.0. PRs welcome!**:
 
 ## Typings
 

@@ -1,3 +1,11 @@
+> ⚠️ As off 2022, I don't recomend using this as part of the foundation for a styling system for anything but small projects.
+
+> While this package is simple and lightweight and solves a common problem in a familiar way, I suggest you try styled-system or Shopify's [Restyle](https://github.com/Shopify/restyle) (especially if you're using React Native) instead — or a component library inspired by (or built with) those tools. 
+> 
+> There's a little more work upfront but it makes building performant UIs with React a lot faster and more consistent.
+
+> No more work will go into this package as of Febuary 2022. If you'd like an active fork to be linked here please contact me.
+
 <br /><div align="center">
   
 <img src="https://i.imgur.com/IQ37K7m.png" width="249px" /><br />
